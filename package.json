@@ -1,0 +1,34 @@
+{
+  "name": "simba",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@jkroso/type": "^2.0.0",
+    "bootstrap": "^4.1.0",
+    "edn-js": "0.0.4",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-notifications": "^1.4.3",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "react-stomp": "^3.0.1",
+    "reactstrap": "^5.0.0",
+    "sockjs-client": "^1.1.4",
+    "stompjs": "^2.3.3",
+    "superagent": "^3.8.3",
+    "type": "0.0.3"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles/index.scss -o src/styles/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src/styles --include-path ./node_modules src/styles -o src/styles --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "node-sass-chokidar": "^1.2.2",
+    "npm-run-all": "^4.1.2"
+  }
+}
